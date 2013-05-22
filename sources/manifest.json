@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "GitFlowTracker",
+    "version": "0.1",
+    "description": "Integrates Pivotal tracker with your hubflow on github",
+    "permissions": [
+	"tabs", 
+	"http://*/*", 
+	"https://*/*"
+    ],
+    "background": {
+	"scripts": ["messages.js"],
+	"persistent": false
+    },
+    "content_scripts": [
+    {
+	"matches": [
+	"http://github.com/*/*", 
+	"https://github.com/*/*"
+	],
+	"css": ["style.css"],
+	"js": ["jquery.js", "gh-tracker.js"]
+    }
+    ],
+    "options_page": "options.html"
+}

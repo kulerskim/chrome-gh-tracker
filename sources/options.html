@@ -1,0 +1,45 @@
+<html>
+    <head>
+	<title>GitFlowTracker Options</title>
+	<link rel='stylesheet' type="text/css" href="chrome://resources/css/chrome_shared.css"/>
+
+
+	<style>
+	    #options, #status{
+		width: 300px;
+		padding: 20px;
+		text-align: center;
+		margin: 100px auto;
+		background: beige;
+
+	    }
+	    #options{
+		border: dashed 1px darkcyan;
+		margin: 100px auto;
+
+	    }
+	    #options *{
+		margin: 10px auto;
+		display: block;
+	    }
+
+	    #options input{
+		width: 250px;
+	    }
+
+	    #status{
+		border: solid 1px green;
+		visibility: hidden;
+	    }
+	</style>
+    </head>    
+    <body>
+	<div id="status"></div>
+	<div id='options'>
+	    <label for='token'>Pivotal Tracker API token</label>
+	    <input type="text" id="token" name="token"/>
+	    <button id="save">Save</button>    
+	</div>
+    </body>
+    <script src="options.js"></script>
+</html>
